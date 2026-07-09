@@ -1,0 +1,19 @@
+.container{
+    margin-top: 40px;
+}
+
+table{
+    background-color: rgba(128, 128, 128, 0);
+}
+
+th{
+    text-align: center;
+}
+
+td{
+    text-align: center;
+}
+
+a{
+    text-decoration: none;
+}
