@@ -1,8 +1,27 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Viewstud.css'
 import NaviBar from './NaviBar'
 
 const ViewStud = () => {
+
+    const[data,changeData]=useState(
+      [
+        {"admnumber":"2031","name":"arya","class":"xII","Grade":"A+"},
+        {"admnumber":"2034","name":"archana","class":"xII","Grade":"A"},
+        {"admnumber":"2028","name":"ananya","class":"xII","Grade":"B+"},
+        {"admnumber":"4407","name":"Akhil","class":"xII","Grade":"c+"},
+         {"admnumber":"2031","name":"arya","class":"xII","Grade":"A+"},
+        {"admnumber":"2034","name":"archana","class":"xII","Grade":"A"},
+        {"admnumber":"2028","name":"ananya","class":"xII","Grade":"B+"},
+        {"admnumber":"4407","name":"Akhil","class":"xII","Grade":"c+"},
+         {"admnumber":"2031","name":"arya","class":"xII","Grade":"A+"},
+        {"admnumber":"2034","name":"archana","class":"xII","Grade":"A"},
+        {"admnumber":"2028","name":"ananya","class":"xII","Grade":"B+"},
+        {"admnumber":"4407","name":"Akhil","class":"xII","Grade":"c+"},
+        
+      ]
+    )
+
   return (
     <div>
         <NaviBar/>
@@ -18,46 +37,24 @@ const ViewStud = () => {
       <th scope="col">Ad.number</th>
       <th scope="col">Name</th>
       <th scope="col">class</th>
-      <th scope="col">Deatils</th>
+      <th scope="col">Grade</th>
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row">3509</th>
-      <td>Arun</td>
-      <td>XII</td>
-      <td><a href=''>Details</a></td>
+    {data.map(
+      (value,index)=>{
+          return(
+                <tr>
+          <th scope="row">{value.admnumber}</th>
+          <td>{value.name}</td>
+         <td>{value.class}</td>
+         <td>{value.Grade}</td>
+
     </tr>
-    <tr>
-      <th scope="row">2098</th>
-      <td>Jacob</td>
-      <td>VII</td>
-      <td><a href=''>Details</a></td>
-    </tr>
-    <tr>
-      <th scope="row">3436</th>
-      <td>John</td>
-      <td>I</td>
-      <td><a href=''>Details</a></td>
-    </tr>
-     <tr>
-      <th scope="row">3436</th>
-      <td>John</td>
-      <td>I</td>
-      <td><a href=''>Details</a></td>
-    </tr>
-     <tr>
-      <th scope="row">3496</th>
-      <td>Aohn</td>
-      <td>II</td>
-      <td><a href=''>Details</a></td>
-    </tr>
-     <tr>
-      <th scope="row">8936</th>
-      <td>John</td>
-      <td>III</td>
-      <td><a href=''>Details</a></td>
-    </tr>
+          )
+      }
+    )}
+          
   </tbody>
 </table>
 
